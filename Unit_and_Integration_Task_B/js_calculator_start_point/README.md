@@ -42,7 +42,7 @@ All of these functions should be tested thoroughly:
 
 ### Integration/Acceptance Tests
 
-You need to write integration/acceptance tests to ensure all of the units of code work together in the browser to perform as the user would wish. The framework provided to do this is Protractor JS using Chai for assertions, and there is one sample test written in `/tests/integration/tests.js`. 
+You need to write integration/acceptance tests to ensure all of the units of code work together in the browser to perform as the user would wish. The framework provided to do this is Protractor JS using Chai for assertions, and there is one sample test written in `/tests/integration/tests.js`.
 
 You should write tests to ensure:
 
@@ -55,8 +55,3 @@ What does the code do in exceptional circumstances?
 
   - If you divide by zero, what is the effect?
   - Can you write a test to describe what you'd prefer to happen, and then correct the code to make that test pass.
-
-
-
-
-
