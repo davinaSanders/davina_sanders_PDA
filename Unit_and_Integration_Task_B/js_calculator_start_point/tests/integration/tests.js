@@ -14,7 +14,7 @@ describe('calculator functionality', function() {
     running_total = element(by.css('#running_total'))
     element(by.css('#number2')).click();
     expect(running_total.getAttribute('value')).to.eventually.equal('2')
-  })
+  });
 
   it('can display running total', function() {
     running_total = element(by.css('#running_total'));
@@ -25,7 +25,7 @@ describe('calculator functionality', function() {
     expect(running_total.getAttribute('value')).to.eventually.equal('7');
   });
 
-  it('should be able to update the display with previous result after pressing +', function() {
+  it('can display additions', function() {
     running_total = element(by.css('#running_total'));
     element(by.css('#number2')).click();
     element(by.css('#operator_add')).click();
@@ -34,7 +34,7 @@ describe('calculator functionality', function() {
     expect(running_total.getAttribute('value')).to.eventually.equal('7');
   });
 
-  it('should be able to update the display with previous result after pressing -', function() {
+  it('can display subtractions', function() {
     running_total = element(by.css('#running_total'));
     element(by.css('#number2')).click();
     element(by.css('#operator_add')).click();
@@ -43,7 +43,7 @@ describe('calculator functionality', function() {
     expect(running_total.getAttribute('value')).to.eventually.equal('7');
   });
 
-  it('should be able to update the display with previous result after pressing /', function() {
+  it('can display divisions', function() {
     running_total = element(by.css('#running_total'));
     element(by.css('#number2')).click();
     element(by.css('#operator_add')).click();
@@ -52,7 +52,7 @@ describe('calculator functionality', function() {
     expect(running_total.getAttribute('value')).to.eventually.equal('7');
   });
 
-  it('should be able to update the display with previous result after pressing *', function() {
+  it('can display multiplications', function() {
     running_total = element(by.css('#running_total'));
     element(by.css('#number2')).click();
     element(by.css('#operator_add')).click();
@@ -61,7 +61,7 @@ describe('calculator functionality', function() {
     expect(running_total.getAttribute('value')).to.eventually.equal('7');
   });
 
-  it('should be able to chain multiple operations together', function() {
+  it('can display result of multiple operations', function() {
     running_total = element(by.css('#running_total'));
     element(by.css('#number5')).click();
     element(by.css('#operator_add')).click();
@@ -75,14 +75,14 @@ describe('calculator functionality', function() {
     expect(running_total.getAttribute('value')).to.eventually.equal('1');
   });
 
-  it('should be able to display negative numbers', function() {
-    running_total = element(by.css('#running_total'));
-    element(by.css('#number5')).click();
-    element(by.css('#operator_subtract')).click();
-    element(by.css('#number6')).click();
-    element(by.css('#operator_equals')).click();
-    expect(running_total.getAttribute('value')).to.eventually.equal('-1');
-  });
+  it('can display negative numbers', function(){
+   running_total = element(by.css('#running_total'));
+   element(by.css('#number1')).click();
+   element(by.css('#operator_subtract')).click();
+   element(by.css('#number9')).click();
+   element(by.css('#operator_equals')).click();
+   expect(running_total.getAttribute('value')).to.eventually.equal('-8');
+ });
 
   it('should be able to display decimals', function() {
     running_total = element(by.css('#running_total'));
