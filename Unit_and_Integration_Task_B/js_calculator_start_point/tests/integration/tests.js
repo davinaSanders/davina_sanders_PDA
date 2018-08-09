@@ -84,7 +84,7 @@ describe('calculator functionality', function() {
    expect(running_total.getAttribute('value')).to.eventually.equal('-8');
  });
 
-  it('should be able to display decimals', function() {
+  it('can display decimals', function() {
     running_total = element(by.css('#running_total'));
     element(by.css('#number2')).click();
     element(by.css('#operator_divide')).click();
